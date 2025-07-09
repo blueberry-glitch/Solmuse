@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SoulMuse 🌟</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Pacifico&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>SoulMuse <span>🌟</span></h1>
+      <p class="subtitle">Tu compañera creativa con IA que transforma emociones en arte.</p>
+    </header>
+
+    <!-- Inicio -->
+    <section id="start-screen" class="screen active">
+      <button class="btn-primary" id="btn-login">Iniciar sesión</button>
+      <button class="btn-secondary" id="btn-register">Registrarse</button>
+    </section>
+
+    <!-- Login -->
+    <section id="login-screen" class="screen">
+      <h2>Iniciar sesión</h2>
+      <form id="login-form" autocomplete="off">
+        <input type="email" id="login-email" placeholder="Email" required />
+        <input type="password" id="login-password" placeholder="Contraseña" required />
+        <button type="submit" class="btn-primary">Entrar</button>
+        <button type="button" class="btn-link" id="login-back">Volver</button>
+      </form>
+    </section>
+
+    <!-- Registro -->
+    <section id="register-screen" class="screen">
+      <h2>Registrarse</h2>
+      <form id="register-form" autocomplete="off">
+        <input type="text" id="register-name" placeholder="Nombre" required />
+        <input type="email" id="register-email" placeholder="Email" required />
+        <input type="password" id="register-password" placeholder="Contraseña" required />
+        <button type="submit" class="btn-primary">Crear cuenta</button>
+        <button type="button" class="btn-link" id="register-back">Volver</button>
+      </form>
+    </section>
+
+    <!-- App Principal -->
+    <section id="main-app" class="screen">
+      <h2>Bienvenido/a a SoulMuse</h2>
+      <textarea id="userInput" placeholder="¿Cómo te sientes hoy?"></textarea>
+      <div class="actions">
+        <button class="btn-art" id="btn-art">🎨 Generar Arte</button>
+        <button class="btn-music" id="btn-music">🎵 Generar Música</button>
+        <button class="btn-poem" id="btn-poem">✍️ Generar Poema</button>
+      </div>
+
+      <div id="results" aria-live="polite"></div>
+
+      <h3>MoodMirror</h3>
+      <div class="moodmirror-buttons">
+        <button class="btn-secondary" id="btn-camera">🎭 Escanear Rostro</button>
+        <button class="btn-secondary" id="btn-voice">🎙️ Grabar Voz</button>
+      </div>
+
+      <video id="camera" autoplay muted playsinline class="hidden"></video>
+      <audio id="voice-record" controls class="hidden"></audio>
+
+      <button class="btn-spotify" id="btn-spotify">🎧 Vincular con Spotify</button>
+
+      <button class="btn-logout" id="btn-logout">Cerrar sesión</button>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 SoulMuse - Hecho con ❤️</p>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
